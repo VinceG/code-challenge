@@ -1,0 +1,25 @@
+<template>
+    <div
+        class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm"
+    >
+        <h5 class="my-0 mr-md-auto font-weight-normal">{{ name }}</h5>
+        <button type="button" class="btn btn-outline-primary" @click="onLogout">Logout</button>
+    </div>
+</template>
+
+<script>
+import { mapActions, mapGetters } from "vuex";
+export default {
+    computed: {
+        ...mapGetters('auth', ['name'])
+    },
+    methods: {
+        ...mapActions("auth", ["logout"]),
+        onLogout() {
+            this.logout()
+                .then(() => this.$router.push({ name: "login" }))
+                .catch(error => console.log(error));
+        }
+    }
+};
+</script>
