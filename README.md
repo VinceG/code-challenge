@@ -1,4 +1,4 @@
-# challenge
+# Code Challenge
 
 
 I’d like you to build a simple frontend powered by Laravel and Vue.js built on top of this nifty API: https://reqres.in
