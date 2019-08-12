@@ -46,17 +46,3 @@ export default {};
     opacity: 0.740877;
 }
 </style>
-
-<div>
-        <div class="loading-overlay"/>
-        <div class="loading-wrapper">
-            <div class="blockui">
-                <span>
-                    <slot>Loading, Please Wait...</slot>
-                </span>
-                <span>
-                    <div class="kt-spinner kt-spinner--v2 kt-spinner--success"/>
-                </span>
-            </div>
-        </div>
-    </div>
